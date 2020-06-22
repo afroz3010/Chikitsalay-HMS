@@ -1,0 +1,20 @@
+<?php
+session_start();
+if(isset($_SESSION['receptionist'])){
+	unset($_SESSION['receptionist']);
+		header("Location:index.php");
+}
+if(isset($_SESSION['doctor'])){
+	unset($_SESSION['doctor']);
+	header("Location:Doctor/doctorlogin.php");
+}
+if(isset($_SESSION['nurse'])){
+	unset($_SESSION['nurse']);
+	header("Location:Nurse/nurselogin.php");
+}
+if(isset($_SESSION['admin'])){
+	unset($_SESSION['admin']);
+	header("Location:Admin/adminlogin.php");
+}
+
+?>
